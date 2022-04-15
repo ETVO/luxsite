@@ -5,7 +5,7 @@
  * @package luxsite
  */
 
-$url_prefix = 'http://' . $_SERVER['HTTP_HOST'];
+$url_prefix = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . '://' . $_SERVER['HTTP_HOST'];
 
 // Core constants 
 define("IMG_DIR", $url_prefix . '/assets/imgs/');
