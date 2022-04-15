@@ -47,6 +47,8 @@ $contact = array(
     <link rel="stylesheet" href="<?php echo CSS_DIR . 'main.css'; ?>">
     <link rel="stylesheet" href="<?php echo FONTS_DIR . 'bootstrap-icons/bootstrap-icons.css'; ?>">
     <link rel="stylesheet" href="<?php echo FONTS_DIR . 'Raleway/font.css'; ?>">
+
+    <link rel="shortcut icon" href="<?php echo IMG_DIR . 'logo.svg' ?>" type="image/x-icon">
 </head>
 
 <body class="em-breve">
@@ -74,14 +76,14 @@ $contact = array(
 
             <div class="links mt-4">
                 <h2 class="subtitle">Entre em Contacto</h3>
-                <?php foreach ($contact as $link) : ?>
-                    <div class="link">
-                        <a href="<?php echo $link['link']; ?>" target="_blank">
-                            <span class="icon bi-<?php echo $link['icon']; ?>" aria-label="<?php echo $link['label']; ?>"></span>
-                            <span class="text"><?php echo $link['text']; ?></span>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
+                    <?php foreach ($contact as $link) : ?>
+                        <div class="link">
+                            <a href="<?php echo $link['link']; ?>" target="_blank">
+                                <span class="icon bi-<?php echo $link['icon']; ?>" aria-label="<?php echo $link['label']; ?>"></span>
+                                <span class="text"><?php echo $link['text']; ?></span>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
             </div>
         </div>
 
