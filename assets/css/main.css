@@ -1,0 +1,156 @@
+header {
+  background-color: black;
+}
+header nav .navbar-brand img {
+  height: 60px;
+}
+header nav .nav-item {
+  text-transform: uppercase;
+  display: flex;
+  padding: 0.75rem 1rem;
+}
+header nav .nav-item .nav-link {
+  position: relative;
+  z-index: 0;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0 !important;
+  margin: auto;
+  transition: color 0.2s ease-out;
+}
+header nav .nav-item .nav-link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 2px;
+  background-color: white;
+  transition: width 0.2s ease-out, background-color 0.2s;
+}
+header nav .nav-item .nav-link:hover::after {
+  width: 100%;
+  background-color: yellow;
+}
+header nav .nav-item::before {
+  display: block;
+  width: 0.75rem;
+  height: 2px;
+  margin: auto 0.5rem auto 1.5rem;
+  background-color: white;
+}
+header nav .contact {
+  color: white;
+}
+header nav .contact a {
+  text-decoration: none !important;
+}
+header nav .contact a .icon::before {
+  color: #00ff5e;
+  font-size: 2rem;
+  line-height: 1;
+}
+header nav .contact a .text {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  flex-flow: column;
+  transition: color 0.2s;
+}
+header nav .contact a .text small {
+  margin-right: auto;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--bs-gray-500);
+}
+header nav .contact a:hover .text {
+  color: #00ff5e !important;
+}
+
+@media all and (max-width: 768px) {
+  header nav .nav-item .nav-link::after {
+    display: none;
+  }
+  header nav .nav-item .nav-link:hover {
+    color: yellow !important;
+  }
+}
+@media all and (max-width: 576px) {
+  header nav .navbar-brand img {
+    height: 45px;
+  }
+}
+body.em-breve {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  color: #000;
+  background-color: white;
+}
+body.em-breve .brand {
+  width: 100%;
+}
+body.em-breve .brand .logo {
+  width: 100%;
+  max-width: 300px;
+}
+body.em-breve .brand .slogan {
+  width: 100%;
+  max-width: 300px;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+body.em-breve .side {
+  width: 100%;
+  margin: auto;
+}
+body.em-breve .side .title mark {
+  padding: 0;
+  background-color: yellow;
+}
+body.em-breve .side .links {
+  display: flex;
+  flex-flow: column;
+}
+body.em-breve .side .links .subtitle {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+body.em-breve .side .links .link {
+  display: flex;
+  margin: 0.1rem;
+}
+body.em-breve .side .links .link a {
+  text-decoration: none;
+  color: black;
+}
+body.em-breve .side .links .link a .icon {
+  font-size: 1.25rem;
+  -webkit-text-stroke: 0.2px inherit;
+}
+body.em-breve .side .links .link a .text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: auto 0 auto 0.5rem;
+}
+body.em-breve .side .links .link a:hover .text {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 768px) {
+  body.em-breve .brand {
+    max-width: 300px;
+  }
+  body.em-breve .side {
+    max-width: 300px;
+  }
+}
+* {
+  font-variant-numeric: lining-nums;
+}

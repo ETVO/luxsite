@@ -1,0 +1,17 @@
+$primary: yellow;
+$dark: #000;
+$light: #fafafa;
+$secondary: #444;
+
+$body-color: $dark;
+
+$headings-font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !default;
+$font-family-sans-serif: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !default;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$headings-font-weight: 700;
+
+@import "~bootstrap/scss/bootstrap";

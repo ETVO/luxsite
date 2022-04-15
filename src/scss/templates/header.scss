@@ -1,0 +1,140 @@
+$header-bg: black;
+$header-color: white;
+
+header {
+    background-color: $header-bg;
+    nav {
+        .navbar-brand {
+            img {
+                height: 60px;
+            }
+        }
+
+        .nav-item {
+            text-transform: uppercase;
+
+            display: flex;
+            padding: .75rem 1rem;
+
+            .nav-link {
+                position: relative;
+                z-index: 0;
+
+                color: $header-color !important;
+                font-weight: 600 !important;
+
+                padding: 0 !important;
+                margin: auto;
+
+                transition: color 0.2s ease-out;
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 0;
+                    left: 0;
+
+                    width: 0.5rem;
+                    height: 2px;
+
+                    background-color: $header-color;
+
+                    transition: width 0.2s ease-out, background-color 0.2s;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                        background-color: yellow;
+                    }
+                }
+            }
+
+            &::before {
+                // content: '';
+                display: block;
+                width: 0.75rem;
+                height: 2px;
+                margin: auto 0.5rem auto 1.5rem;
+                background-color: $header-color;
+            }
+        }
+
+        .contact {
+            color: $header-color;
+
+            a {
+                text-decoration: none !important;
+                
+                .icon {
+                    &::before {
+                        color: #00ff5e;
+                        font-size: 2rem;
+                        line-height: 1;
+                    }
+                }
+                
+                .text {
+                    color: white;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    line-height: 1;
+                    display: flex;
+                    flex-flow: column;
+
+                    transition: color .2s;
+    
+                    small {
+                        margin-right: auto;
+                        font-size: .75rem;
+                        font-weight: 300;
+                        color: var(--bs-gray-500);
+                    }
+                }
+
+                &:hover {
+                    .text {
+                        color: #00ff5e !important;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+
+@media all and (max-width: 768px) {
+    header {
+        nav {
+            .nav-item {
+                .nav-link {
+
+                    &::after {
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: yellow !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    header {
+        nav {
+            .navbar-brand {
+                img {
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
