@@ -18,6 +18,8 @@
 </head>
 <body>
     <?php include_once './templates/header.php'; ?>
+    <?php include_once './templates/landing.php'; ?>
+    <?php include_once './templates/cards.php'; ?>
     <?php include_once './templates/footer.php'; ?>
 </body>
 

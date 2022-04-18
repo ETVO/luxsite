@@ -44,3 +44,30 @@ $contact = array(
         'link' => 'tel:351913936942'
     ),
 );
+
+$servicos = array(
+    array(
+        'icon' => 'columns-gap',
+        'color' => '#000',
+        'title' => 'Projeto Estratégico',
+        'short_desc' => 'Para colocar a sua empresa na rota de decisão dos seus potenciais clientes.'
+    ),
+    array(
+        'icon' => 'chat-left-heart',
+        'color' => '#ff0000',
+        'title' => 'Redes Sociais',
+        'short_desc' => 'É através delas que, dia após dia, construímos a sua proximidade com o seu público.'
+    ),
+    array(
+        'icon' => 'bar-chart-fill',
+        'color' => '#66ff00',
+        'title' => 'Tráfego Pago',
+        'short_desc' => 'Com anúncios direcionados, garante que a sua empresa apareça nas buscas do seu público alvo.'
+    ),
+    array(
+        'icon' => 'house-fill',
+        'color' => '#2a7fff',
+        'title' => 'Website',
+        'short_desc' => 'Contar a história da sua empresa e criar uma relação ainda mais próxima com o seu público.'
+    ),
+);

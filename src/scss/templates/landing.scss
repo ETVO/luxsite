@@ -1,0 +1,52 @@
+.landing {
+    padding: 5% 15% 12%;
+    display: flex;
+    position: relative;
+
+    // border-bottom: solid 2px #000;    
+
+    .content {
+        margin: auto;
+        text-align: center;
+        
+        .title {
+            .typewrite > .wrap {
+                border-right: 0.01rem solid transparent;
+            }
+        }
+        
+        .text {
+            max-width: 600px;
+        }
+        
+    }
+
+    .bottom-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+// .text {
+//     // max-width: 768px;
+    
+//     b {
+//         font-size: 1.75rem;
+//         font-weight: 800;
+        
+//         .typewrite > .wrap {
+//             border-right: 0.15rem solid #000;
+//             animation: blinkTextCursor .5s steps(50) infinite normal;
+//         }
+//     }
+// }
+
+@keyframes blinkTextCursor{
+    from{border-right-color: #000;}
+    to{border-right-color: transparent;}
+  }

@@ -1,8 +1,26 @@
-
 // Import templates
-@import './templates/header.scss';
-@import './templates/em-breve.scss';
+@import "./templates/em-breve.scss";
+@import "./templates/header.scss";
+@import "./templates/landing.scss";
+@import "./templates/cards.scss";
 
 * {
     font-variant-numeric: lining-nums;
+}
+
+mark {
+    padding: 0;
+    background-color: #ffff00;
+}
+
+.btn-lux {
+    padding: 0.4rem 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-width: 0.125rem;
+}
+
+/* All delay classes will take half the time to start */
+:root {
+    --animate-delay: 0.1s;
 }

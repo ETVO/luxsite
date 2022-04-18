@@ -1,3 +1,76 @@
+body.em-breve {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  color: #000;
+  background-color: white;
+}
+body.em-breve .brand {
+  width: 100%;
+}
+body.em-breve .brand .logo {
+  width: 100%;
+  max-width: 300px;
+}
+body.em-breve .brand .slogan {
+  width: 100%;
+  max-width: 300px;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+body.em-breve .side {
+  width: 100%;
+  margin: auto;
+}
+body.em-breve .side .links {
+  display: flex;
+  flex-flow: column;
+}
+body.em-breve .side .links .subtitle {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+body.em-breve .side .links .link {
+  display: flex;
+  margin: 0.1rem;
+}
+body.em-breve .side .links .link a {
+  text-decoration: none;
+  color: black;
+}
+body.em-breve .side .links .link a .icon {
+  font-size: 1.25rem;
+  -webkit-text-stroke: 0.2px inherit;
+}
+body.em-breve .side .links .link a .text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: auto 0 auto 0.5rem;
+}
+body.em-breve .side .links .link a:hover .text {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 768px) {
+  body.em-breve {
+    overflow-y: hidden;
+  }
+  body.em-breve .brand {
+    max-width: 300px;
+  }
+  body.em-breve .brand .logo {
+    width: 150px;
+    margin-left: auto;
+  }
+  body.em-breve .brand .slogan {
+    font-size: 1.1rem;
+  }
+  body.em-breve .side {
+    max-width: 300px;
+  }
+}
 header {
   background-color: black;
 }
@@ -84,83 +157,93 @@ header nav .contact a:hover .text {
     height: 45px;
   }
 }
-body.em-breve {
-  height: 100vh;
+.landing {
+  padding: 5% 15% 12%;
   display: flex;
-  flex-flow: column;
-  color: #000;
-  background-color: white;
+  position: relative;
 }
-body.em-breve .brand {
-  width: 100%;
-}
-body.em-breve .brand .logo {
-  width: 100%;
-  max-width: 300px;
-}
-body.em-breve .brand .slogan {
-  width: 100%;
-  max-width: 300px;
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.3;
-}
-body.em-breve .side {
-  width: 100%;
+.landing .content {
   margin: auto;
+  text-align: center;
 }
-body.em-breve .side .title mark {
+.landing .content .title .typewrite > .wrap {
+  border-right: 0.01rem solid transparent;
+}
+.landing .content .text {
+  max-width: 600px;
+}
+.landing .bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
   padding: 0;
-  background-color: yellow;
-}
-body.em-breve .side .links {
-  display: flex;
-  flex-flow: column;
-}
-body.em-breve .side .links .subtitle {
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-body.em-breve .side .links .link {
-  display: flex;
-  margin: 0.1rem;
-}
-body.em-breve .side .links .link a {
-  text-decoration: none;
-  color: black;
-}
-body.em-breve .side .links .link a .icon {
-  font-size: 1.25rem;
-  -webkit-text-stroke: 0.2px inherit;
-}
-body.em-breve .side .links .link a .text {
-  font-size: 1rem;
-  font-weight: 500;
-  margin: auto 0 auto 0.5rem;
-}
-body.em-breve .side .links .link a:hover .text {
-  text-decoration: underline;
+  margin: 0;
 }
 
-@media all and (max-width: 768px) {
-  body.em-breve {
-    overflow-y: hidden;
+@-webkit-keyframes blinkTextCursor {
+  from {
+    border-right-color: #000;
   }
-  body.em-breve .brand {
-    max-width: 300px;
-  }
-  body.em-breve .brand .logo {
-    width: 150px;
-    margin-left: auto;
-  }
-  body.em-breve .brand .slogan {
-    font-size: 1.1rem;
-  }
-  body.em-breve .side {
-    max-width: 300px;
+  to {
+    border-right-color: transparent;
   }
 }
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: #000;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.cards {
+  margin-top: -6rem;
+  margin-bottom: 2.5rem;
+}
+.cards .inner {
+  display: flex;
+  padding: 0 1.25rem;
+}
+.cards .inner .block {
+  width: 100%;
+  margin: 0 1.25rem;
+  padding: 1rem 0.75rem;
+  background-color: white;
+  border: solid 0.1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.cards .inner .block .icon {
+  font-size: 2.5rem;
+}
+.cards .inner .block .title {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.cards .inner .block .text {
+  font-size: 0.9rem;
+}
+
 * {
   font-variant-numeric: lining-nums;
+}
+
+mark {
+  padding: 0;
+  background-color: #ffff00;
+}
+
+.btn-lux {
+  padding: 0.4rem 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-width: 0.125rem;
+}
+
+/* All delay classes will take half the time to start */
+:root {
+  --animate-delay: 0.1s;
 }

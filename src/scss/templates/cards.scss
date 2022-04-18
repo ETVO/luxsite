@@ -1,0 +1,32 @@
+.cards {
+    margin-top: -6rem;
+    margin-bottom: 2.5rem;
+
+    .inner {
+        display: flex;
+        padding: 0 1.25rem;
+        .block {
+            width: 100%;
+            margin: 0 1.25rem;
+            padding: 1rem .75rem;
+
+            background-color: white;
+            border: solid .1rem rgba(#000, .2);
+            border-radius: .5rem;
+            box-shadow: 2px 2px 5px 0px rgba(#000, 0.1);
+
+            .icon {
+                font-size: 2.5rem;
+            }
+
+            .title {
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+
+            .text {
+                font-size: .9rem;
+            }
+        }
+    }
+}
