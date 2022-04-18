@@ -146,7 +146,6 @@ body.em-breve .side .links .link a:hover .text {
 @media all and (max-width: 768px) {
   body.em-breve {
     overflow-y: hidden;
-    padding: 1.5rem 0;
   }
   body.em-breve .brand {
     max-width: 300px;
