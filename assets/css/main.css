@@ -144,8 +144,19 @@ body.em-breve .side .links .link a:hover .text {
 }
 
 @media all and (max-width: 768px) {
+  body.em-breve {
+    overflow-y: hidden;
+    padding: 1.5rem 0;
+  }
   body.em-breve .brand {
     max-width: 300px;
+  }
+  body.em-breve .brand .logo {
+    width: 150px;
+    margin-left: auto;
+  }
+  body.em-breve .brand .slogan {
+    font-size: 1.1rem;
   }
   body.em-breve .side {
     max-width: 300px;
